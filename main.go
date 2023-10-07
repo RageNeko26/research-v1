@@ -10,6 +10,21 @@ import (
 
 var auth smtp.Auth
 
+type Request struct {
+  from string
+  to []string 
+  subject string 
+  body string
+}
+
+func NewRequest(to []string, subject, body string) *Request {
+  return &Request{
+    to: to,
+    subject: subject,
+    body: body,
+  }
+}
+
 func main() {
   err := godotenv.Load(".env")
 
@@ -23,5 +38,12 @@ func main() {
   smtp_host := os.Getenv("SMTP_HOST")
 
   auth = smtp.PlainAuth("", smtp_username, smtp_password, smtp_host)
+
+  templateData := struct {
+      Name string
+  }{
+    Name: "Foo",
+  }
+
 
 }
