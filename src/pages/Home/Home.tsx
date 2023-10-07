@@ -1,4 +1,5 @@
 import { Container, Row, Col, Badge } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 export default function Home() {
   return(
@@ -15,7 +16,7 @@ export default function Home() {
       <Col>
         <div className="my-3">
           <h3 className="fs-4">List API</h3>
-          <p className="fs-5"><Badge>Forgot Password</Badge> </p> 
+          <Link to="/api/forgot-password" className="fs-5"><Badge>Forgot Password</Badge> </Link> 
         </div>
       </Col>
     </Row>
