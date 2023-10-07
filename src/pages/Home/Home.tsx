@@ -7,8 +7,8 @@ export default function Home() {
     <Row lg={2}>
       <Col>
          <div className="my-3">
-            <h3 className="fs-4">API Reference for CVZN</h3>
-              <p className="text-secondary">Sebuah dokumentasi dan sample code API Web Services CV Zaman Now. Diperuntukan untuk developer internal, baik Front-End Engineer maupun Back-end Engineer.</p>
+            <h3 className="fs-4">API Reference and Research</h3>
+              <p className="text-secondary">Sebuah dokumentasi dan sample code API Web Services. Diperuntukan untuk keperluan penelitian, pembelajaran dan dokumentasi.</p>
     </div>
       </Col>
     </Row>
@@ -16,7 +16,8 @@ export default function Home() {
       <Col>
         <div className="my-3">
           <h3 className="fs-4">List API</h3>
-          <Link to="/api/forgot-password" className="fs-5"><Badge>Forgot Password</Badge> </Link> 
+          <Link to="/api/forgot-password" className="fs-5"><Badge>Forgot Password</Badge> </Link>
+          <Link to="/" className="fs-5 mx-2"> <Badge>Email Sender</Badge> </Link>
         </div>
       </Col>
     </Row>

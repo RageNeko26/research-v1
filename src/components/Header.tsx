@@ -6,7 +6,7 @@ export default function Header() {
         <Container>
           <Navbar.Brand href="#home">Research</Navbar.Brand>
           <Nav className="ms-auto">
-            <Nav.Link href="#home" className="active">Home</Nav.Link>
+            <Nav.Link href="/" className="active">Home</Nav.Link>
             <Nav.Link href="#features">Documentation</Nav.Link>
             <Nav.Link href="#pricing">Server Status</Nav.Link>
              <Nav.Link href="#pricing">About</Nav.Link>
