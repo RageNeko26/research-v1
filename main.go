@@ -79,6 +79,11 @@ func main() {
 
   r := NewRequest([]string{"rneko2006@gmail.com"}, "Greet", "Hello, bro")
   
+  if err = r.ParseTemplate("template.html", templateData); err == nil {
+    success, _ := r.SendEmail()
+    fmt.Println("Success:", success)
+  }
+
 
 
 }
