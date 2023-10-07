@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"net/smtp"
 	"os"
+	"text/template"
 
 	"github.com/joho/godotenv"
 )
@@ -36,6 +38,23 @@ func (r *Request) SendEmail() (bool, error) {
   }
 
   return true, nil
+}
+
+func (r *Request) ParseTemplate(filename string, data interface{}) error {
+  t, err := template.ParseFiles(filename)
+
+  if err != nil {
+    return err
+  }
+
+  buf := new(bytes.Buffer)
+
+  if err = t.Execute(buf, data); err != nil {
+    return err
+  }
+
+  r.body = buf.String()
+  return nil
 }
 
 func main() {
