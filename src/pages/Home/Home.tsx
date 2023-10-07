@@ -17,7 +17,7 @@ export default function Home() {
         <div className="my-3">
           <h3 className="fs-4">List API</h3>
           <Link to="/api/forgot-password" className="fs-5"><Badge>Forgot Password</Badge> </Link>
-          <Link to="/" className="fs-5 mx-2"> <Badge>Email Sender</Badge> </Link>
+          <Link to="/api/email-sender" className="fs-5 mx-2"> <Badge>Email Sender</Badge> </Link>
         </div>
       </Col>
     </Row>
