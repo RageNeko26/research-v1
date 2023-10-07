@@ -25,6 +25,19 @@ func NewRequest(to []string, subject, body string) *Request {
   }
 }
 
+func (r *Request) SendEmail() (bool, error) {
+  mime := "MIME-version: 1.0;\nContent-Type: text/plain; charset=\"UTF-8\";\n\n "
+  subject := "Subject: " + r.subject + "!\n"
+  msg := []byte(subject + mime + "\n" + r.body)
+  addr := "smtp.gmail.com:587"
+
+  if err := smtp.SendMail(addr, auth, "devgrumpycat@gmail.com", r.to, msg); err != nil {
+    return false, err
+  }
+
+  return true, nil
+}
+
 func main() {
   err := godotenv.Load(".env")
 
@@ -44,6 +57,9 @@ func main() {
   }{
     Name: "Foo",
   }
+
+  r := NewRequest([]string{"rneko2006@gmail.com"}, "Greet", "Hello, bro")
+  
 
 
 }
