@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
 import Header from "./components/Header"
 import Home from "./components/Home.tsx"
@@ -5,9 +6,13 @@ import Home from "./components/Home.tsx"
 function App() {
    
    return (
-    <>
-    <Header />
-     <Home />
+   <>
+   <Header />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
