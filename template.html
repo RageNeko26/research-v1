@@ -1,106 +1,216 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password - CVZAMANNOW</title>
+    <style>
 
-</head>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-<body>
-<p>
-    Hello {{.Name}}
-    
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FCFEFF;
+        }
 
-</p>
+        table {
+            border-spacing: 0;
+        }
 
-<main>
-         <div
-            style="
-              font-family: sans-serif;
-              width: 20rem;
-              padding: 0 1rem;
-              height: 30rem;
-              background-color: #0d4a3e;
-              margin: auto;
-              display: flex;
-              flex-direction: column;
-              "
-         >
-            <div
-               style="display: flex; justify-content: center; align-items: center; flex-direction: column;"
-            >
-               <h3
-                  style="width: 80%;
-                            text-align: center;
-                            color: white;
-                            font-weight: 600;
-                            margin: 0;
-                            font-size: 1.3rem;
-                            line-height: 150%;"
-               >
-                  Permintaan Ubah Kata Sandi
-               </h3>
-               <p
-                  style="color: #f9fafb;
-                            font-weight: 400;
-                            font-size: 0.9rem;
-                            text-align: center;"
-               >
-                  Kami telah menerima permintaan perubahan kata sandi untuk akun
-                  Anda.
-               </p>
-               <p
-                  style="color: #f9fafb;
-                            font-weight: 400;
-                            font-size: 0.9rem;
-                            text-align: center;"
-               >
-                  Tautan ini akan kedaluwarsa dalam 24 jam. Apabila Anda tidak
-                  meminta perubahan kata sandi, abaikan email ini dan tidak ada
-                  perubahan yang akan dilakukan pada akun Anda.
-               </p>
-               <a
-                  style="width: 200px;
-                            background-color: #ffa824;
-                            color: white;
-                            border: none;
-                            font-size: 0.9rem;
-                            padding: 0.7rem;
-                            font-weight: 500;
-                            text-decoration: none;
-                            text-align: center;
-                            margin: 1rem 0;
-                            display: block;"
-                  href="/#"
-               >
-                  Ubah Kata Sandi
-               </a>
-               <p
-                  style="color: #f9fafb;
-                            font-weight: 400;
-                            font-size: 0.9rem;
-                            text-align: center;"
-               >
-                  Apabila permintaan ubah kata sandi tidak Anda terima, segera
-                  ubah kata sandi akun Anda untuk mencegah akses tidak sah.
-               </p>
-               <div
-                  style="display: flex;
-                            filter: opacity(50%);
-                            justify-content: center;
-                            align-items: center;"
-               >
-                  <!-- <img src="" alt="logo" /> -->
-                  <h4
-                     style="margin-left: 10px;
-                               font-weight: 600;
-                               line-height: 150%;
-                               color: #fff;"
-                  >
-                     CV Zaman Now
-                  </h4>
-               </div>
-            </div>
-         </div>
-      </main>
+        td {
+            padding: 0;
+        }
 
+        img {
+            border: 0;
+        }
 
-</body>
+        .wrapper {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 80px;
+            table-layout: fixed;
+            background-color: #FCFEFF;
+        }
 
+        @media screen and (max-width: 600px) {
+            .wrapper {
+                padding-bottom: 0px;
+                padding-top: 0;
+            }
+        }
+
+        .webkit {
+            max-width: 600px;
+            min-height: calc(100vh - 120px);
+            background: url('https://i.ibb.co/P4HDrGM/ornament-bg.png') no-repeat bottom right , #0D4A3E;
+            background-size: 312px;
+            border-radius: 12px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .webkit {
+                min-height: 100vh;
+                background-size: 260px;
+            }
+        }
+
+        .outer {
+            width: 100%;
+            max-width: 600px;
+            padding: 72px 78px 144px;
+            margin: 0 auto;
+            border-spacing: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .outer {
+                padding: 32px 32px 64px;
+            }
+        }
+
+        /* navigation */
+
+        .nav table {
+            width: 100%;
+            margin-bottom: 49px;
+        }
+
+        .nav-logo img {
+            height: 68px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav-logo img {
+                height: 48px;
+            }
+        }
+
+        /* header */
+
+        .header-body h2 {
+            margin-bottom: 51px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 150%;
+            color: #F9FAFB;
+        }
+        
+        .header-body p {
+            margin-bottom: 32px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: #F9FAFB;
+        }
+
+        @media screen and (max-width: 375px) {
+            .header-body h2 {
+                margin-bottom: 30px;
+            }
+        }
+
+        .header-body div {
+            text-align: center;
+            margin-top: 66px;
+            margin-bottom: 78px;
+            padding: 8px 21px 9px 21px;
+            vertical-align: middle;
+        }
+
+        .header-body div a {
+            padding: 16.5px 48.5px;
+            background-color: #FFA824;
+            text-decoration: none;
+        }
+
+        .header-body div a span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            color: #FFFFFF;
+        }
+
+        /* footer */
+
+        .footer table {
+            width: 100%;
+        }
+
+        .footer-logo img {
+            height: 45px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer-logo img {
+                height: 36px;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <center class="wrapper">
+      <div class="webkit">
+        <table class="outer" align="center">
+          <tr class="nav">
+            <td>
+              <table>
+                <tr>
+                  <td class="nav-logo" style="text-align: center">
+                       <img src="https://i.ibb.co/p3ywLRJ/logo.png" alt=""> 
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- header -->
+
+          <tr class="header">
+            <td>
+              <table width="100%" style="border-spacing: 0">
+                <tr class="header-body">
+                  <td style="text-align: center;">
+                    <h2>Password Reset Request</h2>
+                    <p>We've received a password change request for your account.</p>
+                    <p>This link will expire in 24 hours. If you did not request a password change, please ignore this email, no changes will be made to your account.</p>
+                    <div>
+                        <a href="">
+                            <span>Reset Password</span>
+                        </a>
+                    </div>
+                    <p>If this request did not come from you, change your account password immediately to prevent further unauthorized access.</p>
+                  </td>
+                </tr>
+            </td>
+          </tr>
+
+          <!-- footer -->
+
+          <tr class="footer">
+            <td>
+              <table>
+                <tr>
+                  <td class="footer-logo" style="text-align: center">
+                    <img src="https://i.ibb.co/ZMGPWFf/Green.png" alt="Green" border="0" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </center>
+  </body>
 </html>
