@@ -3,8 +3,10 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"net/http"
 	"net/smtp"
 	"os"
+	"research-v1/controller"
 	"text/template"
 
 	"github.com/joho/godotenv"
@@ -84,6 +86,8 @@ func main() {
     fmt.Println("Success:", success)
   }
 
-
+  controller.SetupEmailRoutes()
+  fmt.Println("Server is running on port 8080")
+  http.ListenAndServe(":8080", nil)
 
 }
